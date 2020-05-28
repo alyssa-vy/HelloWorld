@@ -688,7 +688,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROA-nA-4Ga">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ROA-nA-4Ga">
                                 <rect key="frame" x="115" y="183" width="132" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="enter your name" bezelStyle="round" id="LSB-76-neU">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -703,9 +703,8 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thd-Qa-IrJ">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="thd-Qa-IrJ">
                                 <rect key="frame" x="113" y="140" width="175" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Label Testing" id="K75-Ct-aJ3">
                                     <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
@@ -717,9 +716,11 @@
                             <constraint firstItem="Q7F-e0-ZsM" firstAttribute="leading" secondItem="ROA-nA-4Ga" secondAttribute="trailing" constant="16" id="0yU-sM-ohD"/>
                             <constraint firstAttribute="trailing" secondItem="Q7F-e0-ZsM" secondAttribute="trailing" constant="102" id="5OG-NY-xQs"/>
                             <constraint firstItem="Q7F-e0-ZsM" firstAttribute="top" secondItem="MdG-FS-BXJ" secondAttribute="top" constant="96" id="LGS-dw-LQM"/>
+                            <constraint firstItem="thd-Qa-IrJ" firstAttribute="leading" secondItem="ROA-nA-4Ga" secondAttribute="leading" id="ZHO-bm-yNu"/>
                             <constraint firstItem="Q7F-e0-ZsM" firstAttribute="top" secondItem="ROA-nA-4Ga" secondAttribute="top" id="j6u-5I-Vdt"/>
-                            <constraint firstItem="ROA-nA-4Ga" firstAttribute="centerX" secondItem="MdG-FS-BXJ" secondAttribute="centerX" id="phf-ea-olJ"/>
+                            <constraint firstItem="ROA-nA-4Ga" firstAttribute="centerX" secondItem="MdG-FS-BXJ" secondAttribute="centerX" constant="-44" id="phf-ea-olJ"/>
                             <constraint firstItem="Q7F-e0-ZsM" firstAttribute="firstBaseline" secondItem="ROA-nA-4Ga" secondAttribute="baseline" id="pmJ-52-cAt"/>
+                            <constraint firstItem="thd-Qa-IrJ" firstAttribute="top" secondItem="ROA-nA-4Ga" secondAttribute="bottom" constant="8" symbolic="YES" id="sTP-Q6-5Xf"/>
                         </constraints>
                     </view>
                 </viewController>

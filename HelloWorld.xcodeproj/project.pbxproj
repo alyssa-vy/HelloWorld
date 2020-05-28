@@ -84,6 +84,7 @@
 				296CDAEB24802A130017E015 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		296CDAEB24802A130017E015 /* Products */ = {
 			isa = PBXGroup;

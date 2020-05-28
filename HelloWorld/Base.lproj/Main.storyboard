@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SlN-bu-1lY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -683,34 +683,67 @@
         <!--View Controller-->
         <scene sceneID="A2d-nZ-mw0">
             <objects>
-                <viewController id="SlN-bu-1lY" sceneMemberID="viewController">
+                <viewController title="View Controller" id="SlN-bu-1lY" sceneMemberID="viewController">
                     <view key="view" id="MdG-FS-BXJ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROA-nA-4Ga">
-                                <rect key="frame" x="20" y="259" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" bezelStyle="round" id="LSB-76-neU">
+                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROA-nA-4Ga">
+                                <rect key="frame" x="115" y="183" width="132" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="enter your name" bezelStyle="round" id="LSB-76-neU">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-e0-ZsM">
-                                <rect key="frame" x="123" y="251" width="71" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y8y-2y-sC5">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-e0-ZsM">
+                                <rect key="frame" x="257" y="176" width="97" height="32"/>
+                                <buttonCell key="cell" type="push" title="Say Hello" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y8y-2y-sC5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thd-Qa-IrJ">
+                                <rect key="frame" x="113" y="140" width="175" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label Testing" id="K75-Ct-aJ3">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Q7F-e0-ZsM" firstAttribute="leading" secondItem="ROA-nA-4Ga" secondAttribute="trailing" constant="16" id="0yU-sM-ohD"/>
+                            <constraint firstAttribute="trailing" secondItem="Q7F-e0-ZsM" secondAttribute="trailing" constant="102" id="5OG-NY-xQs"/>
+                            <constraint firstItem="Q7F-e0-ZsM" firstAttribute="top" secondItem="MdG-FS-BXJ" secondAttribute="top" constant="96" id="LGS-dw-LQM"/>
+                            <constraint firstItem="Q7F-e0-ZsM" firstAttribute="top" secondItem="ROA-nA-4Ga" secondAttribute="top" id="j6u-5I-Vdt"/>
+                            <constraint firstItem="ROA-nA-4Ga" firstAttribute="centerX" secondItem="MdG-FS-BXJ" secondAttribute="centerX" id="phf-ea-olJ"/>
+                            <constraint firstItem="Q7F-e0-ZsM" firstAttribute="firstBaseline" secondItem="ROA-nA-4Ga" secondAttribute="baseline" id="pmJ-52-cAt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="j6D-M0-MEZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="227"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="ZAb-A6-pqk">
+            <objects>
+                <windowController id="Vya-7x-aBT" sceneMemberID="viewController">
+                    <window key="window" title="Hello" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="zdv-De-9mg">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="163" y="199" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+                        <connections>
+                            <outlet property="delegate" destination="Vya-7x-aBT" id="0iQ-IJ-f8h"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="Kx0-pP-DbU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-272"/>
         </scene>
     </scenes>
 </document>
